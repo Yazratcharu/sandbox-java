@@ -17,10 +17,7 @@ public class FriendsSorter {
                     friends[i] = friends[j];
                     friends[j] = name;
                 }
-
-
             }
-
         }
         for (int k = 0; k < friends.length; k++) {
             System.out.println(friends[k]);
