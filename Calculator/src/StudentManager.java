@@ -5,7 +5,7 @@ public class StudentManager {
             int j = i + 1;
             System.out.println(j + ". " + students[i]);
         }
-        int result = 0;
+        int result = 0;d
         String name = "";
 
         for (int i = 0; i < students.length - 1; i++) {
