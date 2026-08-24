@@ -7,7 +7,7 @@ public class BookStore {
         for (Book book: books){
             if (title.equals(book.getTitle())){
                 myBook = book;
-                myBook.displayInfo();
+
             }
         }
         return myBook;
@@ -20,6 +20,7 @@ public class BookStore {
         System.out.print("Введите название книги для поиска: ");
         String title = scanner.nextLine();
 
+
         Book[] books = {
                 new Book("Тайны старого особняка", "Анна Михайловна Воробьёва",2020,799),
                 new Book("Путешествие к сердцу Земли","Михаил Иванович Громов",2018,599),
@@ -29,6 +30,7 @@ public class BookStore {
         };
 
         if (findBookByTitle(books,title)!= null){
+            findBookByTitle(books,title).displayInfo();
 
         }else System.out.println("Книга не найдена");
 
