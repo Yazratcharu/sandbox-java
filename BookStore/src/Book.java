@@ -13,6 +13,9 @@ public class Book {
             this.year = year;
             this.price = price;
         }
+        public Book (){
+
+        }
 
         public String getTitle() {
             return title;
@@ -62,7 +65,9 @@ public class Book {
         }
 
         public void setAvailable(boolean available) {
-            isAvailable = available;
+            if (this.isAvailable == available){
+                System.out.println("Параметр доступности уже установлен в этом положении");
+            } else this.isAvailable = available;
         }
 
 

@@ -1,55 +1,40 @@
 import java.util.Scanner;
 
 public class BookStore {
+
+    static Book findBookByTitle(Book[] books, String title){
+        Book myBook = new Book();
+        for (Book book: books){
+            if (title.equals(book.getTitle())){
+                myBook = book;
+                myBook.displayInfo();
+            }
+        }
+        return myBook;
+    }
     
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите название книги для поиска: ");
         String title = scanner.nextLine();
-        boolean foundBook = false;
 
-        String[] titles = {
-                        "Тайны старого особняка",
-                        "Путешествие к сердцу Земли",
-                        "Кулинарные секреты бабушки",
-                        "Программирование для начинающих",
-                        "Искусство жить красиво"
-                };
+        Book[] books = {
+                new Book("Тайны старого особняка", "Анна Михайловна Воробьёва",2020,799),
+                new Book("Путешествие к сердцу Земли","Михаил Иванович Громов",2018,599),
+                new Book("Кулинарные секреты бабушки","Елена Сергеевна Тихонова",2022,999),
+                new Book("Программирование для начинающих","Дмитрий Алексеевич Соколов",2021,1299),
+                new Book("Искусство жить красиво","Виктория Петровна Морозова",2019,899)
+        };
 
+        if (findBookByTitle(books,title)!= null){
 
-        String[] authors = {
-                        "Анна Михайловна Воробьёва",
-                        "Михаил Иванович Громов",
-                        "Елена Сергеевна Тихонова",
-                        "Дмитрий Алексеевич Соколов",
-                        "Виктория Петровна Морозова"
-                };
-
-        int[] years = {
-                        2020, 2018, 2022, 2021, 2019
-                };
+        }else System.out.println("Книга не найдена");
 
 
-        int[] prices = {
-                        799, 599, 999, 1299, 899
-                };
 
-        Book[] books = new Book[5];
 
-            for (int i = 0; i < books.length ; i++) {
-                books[i] = new Book(titles[i],authors[i],years[i],prices[i]);
-            }
-
-        for (Book book: books){
-            if (title.equals(book.getTitle())){
-                book.displayInfo();
-                foundBook = true;
-            }
-        }
-        if(foundBook == false) {
-            System.out.println("Книга не найдена");
-        }
 
 
     }
