@@ -1,6 +1,6 @@
 public class CoffeeMachineDemo {
     public static void main(String[] args) {
-    CoffeeMachine glassOfCoffee = new CoffeeMachine();
+    CoffeeMachine glassOfCoffee = new CoffeeMachine(800,150);
     glassOfCoffee.setWaterLavel(800);
     glassOfCoffee.setCoffeeBeans(150);
     glassOfCoffee.makeCoffee(20,200);

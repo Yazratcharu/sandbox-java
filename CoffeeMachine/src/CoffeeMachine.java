@@ -3,6 +3,11 @@ public class CoffeeMachine {
     private int waterLavel;
     private int coffeeBeans;
 
+    public CoffeeMachine(int coffeeBeans, int waterLavel) {
+        this.coffeeBeans = coffeeBeans;
+        this.waterLavel = waterLavel;
+    }
+
     public int getCoffeeBeans() {
         return coffeeBeans;
     }
