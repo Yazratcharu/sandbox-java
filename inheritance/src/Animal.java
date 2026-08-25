@@ -1,4 +1,4 @@
-public class Animal {
+public abstract class Animal {
     String name;
     int age;
 
@@ -7,9 +7,7 @@ public class Animal {
         this.name = name;
     }
 
-    public void makeSound(){
-        System.out.println("Страшно орёт");
-    }
+    public abstract void makeSound();
 
     public void displayInfo(){
         System.out.println("Имя: "+this.name+"\nВозраст: "+this.age);
