@@ -1,14 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        Animal[] animals = new Animal[2];
-        animals[0] = new Cat(12,"Molly");
-        animals[1] = new Dog(17,"Greg", "alabuga");
+        Cat cat = new Cat();
+        Dog dog = new Dog();
+        Pet[] pets = {cat, dog
+        };
 
-
-
-
-        for (Animal anim : animals){
-            anim.makeSound();
+        for (Pet ani: pets){
+            ani.feed();
+            ani.play();
         }
+
+
+
+
+
     }
 }

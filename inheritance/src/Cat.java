@@ -1,10 +1,13 @@
-public class Cat extends Animal{
-    public Cat(int age, String name) {
-        super(age, name);
+public class Cat implements Pet{
+
+    @Override
+    public void play() {
+        System.out.println("Кошка играет с шнурком");
     }
 
     @Override
-    public void makeSound() {
-        System.out.println("мяу мяу епта");
+    public void feed() {
+        System.out.println("Кошка ест рыбу");
+
     }
 }
