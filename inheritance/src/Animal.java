@@ -1,6 +1,6 @@
 public abstract class Animal {
-    String name;
-    int age;
+    private String name;
+    private int age;
 
     public Animal(int age, String name) {
         this.age = age;
