@@ -32,23 +32,7 @@ public class Main {
         int choice = scanner.nextInt();
 
         switch (choice){
-            case 1:
-                System.out.println("Вы выбрали фильм: "+movieList.get(choice-1) );
-                System.out.println("У этого замечательного во всех смыслах фильма не менее прекрасный режисер - "+movieDatabase.get(movieList.get(choice-1)));
-                break;
-            case 2:
-                System.out.println("Вы выбрали фильм: "+movieList.get(choice-1) );
-                System.out.println("У этого замечательного во всех смыслах фильма не менее прекрасный режисер - "+movieDatabase.get(movieList.get(choice-1)));
-                break;
-            case 3:
-                System.out.println("Вы выбрали фильм: "+movieList.get(choice-1) );
-                System.out.println("У этого замечательного во всех смыслах фильма не менее прекрасный режисер - "+movieDatabase.get(movieList.get(choice-1)));
-                break;
-            case 4:
-                System.out.println("Вы выбрали фильм: "+movieList.get(choice-1) );
-                System.out.println("У этого замечательного во всех смыслах фильма не менее прекрасный режисер - "+movieDatabase.get(movieList.get(choice-1)));
-                break;
-            case 5:
+            case 1,2,3,4,5:
                 System.out.println("Вы выбрали фильм: "+movieList.get(choice-1) );
                 System.out.println("У этого замечательного во всех смыслах фильма не менее прекрасный режисер - "+movieDatabase.get(movieList.get(choice-1)));
                 break;
@@ -60,26 +44,9 @@ public class Main {
                 Scanner scanner1 = new Scanner(System.in);
                 int choise1 = scanner1.nextInt();
                 switch (choise1){
-                    case 1:
+                    case 1,2,3,4,5:
                         movieDatabase.remove(movieList.get(choise1-1));
                         movieList.remove(choise1-1);
-                        break;
-                    case 2:
-                        movieDatabase.remove(movieList.get(choise1-1));
-                        movieList.remove(choise1-1);
-                        break;
-                    case 3:
-                        movieDatabase.remove(movieList.get(choise1-1));
-                        movieList.remove(choise1-1);
-                        break;
-                    case 4:
-                        movieDatabase.remove(movieList.get(choise1-1));
-                        movieList.remove(choise1-1);
-                        break;
-                    case 5:
-                        movieDatabase.remove(movieList.get(choise1-1));
-                        movieList.remove(choise1-1);
-
                         break;
                     default:
                         System.out.println(" УПС! Кажется вы выбрали что-то не то");
