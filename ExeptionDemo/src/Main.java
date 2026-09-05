@@ -5,11 +5,10 @@ public class Main {
     public static void main(String[] args) {
 
 
-        try {
+        try (Scanner scan = new Scanner(System.in)){
             int[] massiv = {51,3,32,4,5,14};
-            Scanner scan = new Scanner(System.in);
+            System.out.println("Введите индекс и я покажу вам число, которое скрывается под ним в массиве: ");
             int index = scan.nextInt();
-            System.out.println("Введите индекс и я покажу вам число, которое скрывается под ним в массиве");
             System.out.println("Ваш индекс: "+ index);
             System.out.println("Число, которое скрывается под этим индексом: "+ massiv[index]);
         } catch (ArrayIndexOutOfBoundsException e){
